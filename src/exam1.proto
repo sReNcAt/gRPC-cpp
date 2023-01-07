@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message Member {
+  optional string name = 1;
+  optional int32 id = 2;
+  optional string email = 3;
+
+  enum MemberType {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+  }
+
+}
+
+message Groups {
+  repeated Member member = 1;
+}
